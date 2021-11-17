@@ -10,7 +10,7 @@ class ProductController extends Controller
     {
         $data = Product::get();
         $no = 1;
-        return view('pages.product', compact('data', 'no'));
+        return view('pages.product.index', compact('data', 'no'));
     }
 
     public function destroy()

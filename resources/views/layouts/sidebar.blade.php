@@ -43,10 +43,26 @@
             </a>
           </li>
           <li class="nav-item">
+            <a href="category" class="nav-link {{request()->is('category') ? 'active' : ''}}">
+              <i class="nav-icon fas fa-th"></i>
+              <p>
+                Category
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
             <a href="product" class="nav-link {{request()->is('product') ? 'active' : ''}}">
               <i class="nav-icon fas fa-th"></i>
               <p>
                 Product
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="customer" class="nav-link {{request()->is('customer') ? 'active' : ''}}">
+              <i class="nav-icon fas fa-th"></i>
+              <p>
+                Customer
               </p>
             </a>
           </li>

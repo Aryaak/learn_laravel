@@ -1,18 +1,18 @@
 @extends('layouts.master')
 
-@section('title', 'Product')
+@section('title', 'Category')
 
 @section('content')
 <div class="content-header">
     <div class="container-fluid">
       <div class="row mb-2">
         <div class="col-sm-6">
-          <h1 class="m-0">Product</h1>
+          <h1 class="m-0">Category</h1>
         </div><!-- /.col -->
         <div class="col-sm-6">
           <ol class="breadcrumb float-sm-right">
             <li class="breadcrumb-item"><a href="#">Home</a></li>
-            <li class="breadcrumb-item active">Product</li>
+            <li class="breadcrumb-item active">Category</li>
           </ol>
         </div><!-- /.col -->
       </div><!-- /.row -->
@@ -37,12 +37,12 @@
                 <tbody >
                     @forelse ($data as $item)
                     <tr>
-                        <td>{{$no++}}</td>
+                        <td>{{$loop->iteration}}</td>
                         <td>{{$item->name}}</td>
                         <td>{{$item->stock}}</td>
                         <td>{{$item->price}}</td>
                         <td colspan="2">
-                          <form action="product/delete" method="POST" class="d-inline">
+                          <form action="category/delete" method="POST" class="d-inline">
                             @csrf
                             @method('DELETE')
                             <input type="hidden" name="id" value="{{$item->id}}">
